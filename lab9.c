@@ -6,18 +6,19 @@ struct RecordType
 	int		id;
 	char	name;
 	int		order; 
+	//Create a next pointer for linkedlist structure
 };
 
 // Fill out this structure
 struct HashType
 {
-
+	// create a pointer to a RecordType
 };
 
 // Compute the hash function
 int hash(int x)
 {
-
+	// has function is x % tablesize
 }
 
 // parses input file to an integer array
@@ -69,6 +70,15 @@ void printRecords(struct RecordType pData[], int dataSz)
 	printf("\n\n");
 }
 
+void insertRecord(struct HashType *hashTable, struct RecordType *record, int tableSize)
+{
+    // call the hash function to get the index
+    // if the RecordType at that index is NULL
+    // set 'record' equal to the HashType pointer in the table at index
+    // else
+    // traverse to the end of the linkedlist and add 'record' to the end of it
+}
+
 // display records in the hash structure
 // skip the indices which are free
 // the output will be in the format:
@@ -81,6 +91,9 @@ void displayRecordsInHash(struct HashType *pHashArray, int hashSz)
 	{
 		// if index is occupied with any records, print all
 	}
+	// for each entry in the table
+    // print the contents in that index
+    // The output should look like this (for example): "Index 1 -> 21715, Q, 16 -> 28876, a, 26 -> NULL"
 }
 
 int main(void)
